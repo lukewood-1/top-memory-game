@@ -1,8 +1,8 @@
 @font-face {
   font-family: arsenal;
   src: 
-    url('./assets/arsenal.woff'),
-    url('./assets/arsenal.woff2');
+    url('/arsenal.woff'),
+    url('/arsenal.woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
   font-family: exo;
   src: 
-    url('./assets/exo.woff'),
-    url('./assets/exo.woff2');
+    url('/exo.woff'),
+    url('/exo.woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -39,7 +39,7 @@
 }
 
 body {
-  background-image: url('./assets/tableBg.jpg');
+  background-image: url('/tableBg.jpg');
   background-size: cover;
   background-position: 50% 45%;
 }
@@ -218,18 +218,18 @@ hr { margin: 0; }
 }
 
 .hearts::after, .hearts::before {
-  content: url('./assets/hearts_icon.png');
+  content: url('/hearts_icon.png');
 }
 .diamonds::after, .diamonds::before {
-  content: url('./assets/diamonds_icon.png');
+  content: url('/diamonds_icon.png');
   ;
 }
 .hearts, .diamonds {color: var(--red-card)}
 .spades::after, .spades::before {
-  content: url('./assets/spades_icon.png');
+  content: url('/spades_icon.png');
 }
 .clubs::after, .clubs::before {
-  content: url('./assets/clubs_icon.png');
+  content: url('/clubs_icon.png');
 }
 .clubs, .spades {color: #000}
 .hearts::before, .diamonds::before, .spades::before, .clubs::before {
@@ -239,7 +239,7 @@ hr { margin: 0; }
   align-self: flex-end;
 }
 .no-suit{
-  background-image: url('./assets/clubs_icon.png'), url('./assets/spades_icon.png'), url('./assets/diamonds_icon.png'), url('./assets/hearts_icon.png');
+  background-image: url('/clubs_icon.png'), url('/spades_icon.png'), url('/diamonds_icon.png'), url('/hearts_icon.png');
   background-color: #fff;
   background-repeat: no-repeat;
   flex: 1;
@@ -277,7 +277,7 @@ hr { margin: 0; }
   padding: 0.75rem 1.5rem;
   margin-bottom: 1.2rem;
   color:#000;
-  background-image: url('./assets/clubs_icon.png'), url('./assets/spades_icon.png'), url('./assets/diamonds_icon.png'), url('./assets/hearts_icon.png');
+  background-image: url('/clubs_icon.png'), url('/spades_icon.png'), url('/diamonds_icon.png'), url('/hearts_icon.png');
   background-color: #fff;
   background-repeat: no-repeat;
   animation: suitRotate 10s ease-in-out infinite alternate forwards,
@@ -324,7 +324,7 @@ hr { margin: 0; }
 }
 
 .win-screen {
-  background-image: radial-gradient(#000 10%, #0008), url('./assets/cardDeck_Konczakowski_compressed.gif');
+  background-image: radial-gradient(#000 10%, #0008), url('/cardDeck_Konczakowski_compressed.gif');
   background-size: cover;
   background-position: center;
   width: 100vw;
