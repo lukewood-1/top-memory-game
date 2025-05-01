@@ -249,6 +249,25 @@ hr { margin: 0; }
   animation: suitRotate 4s linear infinite normal forwards;
 }
 
+.langSelect {
+  & > div {
+    display: flex;
+    justify-content: space-around;
+
+    & .btn-br {
+      background-image: url('/brazil-flag.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+
+    & .btn-en {
+      background-image: url('/murica-british-flag.jpg');
+      background-position: center;
+      background-size: cover;
+    } 
+  }
+}
+
 .score-counter {
   display: grid;
   place-items: center;

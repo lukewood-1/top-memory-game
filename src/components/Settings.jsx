@@ -75,8 +75,8 @@ export default function Settings({difficulty, suit, onDifficultyChange, onSuitCh
       <div className="langSelect">
         <h3>{language === 'en' ? 'Language' : 'Língua'}</h3>
         <div>
-          <button onClick={onLangChange} value='en'>English</button>
-          <button onClick={onLangChange} value='br'>Portuguẽs</button>
+          <button className='btn-en' onClick={onLangChange} value='en'>English</button>
+          <button className='btn-br' onClick={onLangChange} value='br'>Portuguẽs</button>
         </div>
       </div>
     </dialog>
