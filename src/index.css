@@ -62,9 +62,11 @@ header {
 }
 
 main {
-  margin: 0 auto;
-  padding-inline: 4rem;
   flex: 1;
+  align-self: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
 p {
@@ -249,9 +251,8 @@ hr { margin: 0; }
 
 .score-counter {
   display: grid;
-  justify-items: center;
-  align-items: center;
-  grid: auto / 1fr 1rem 1fr;
+  place-items: center;
+  grid: auto / repeat(3, 1fr 0px);
 
   & hr {
     height: 1rem;
@@ -261,12 +262,19 @@ hr { margin: 0; }
 
   & p {
     margin: .75rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    & span {
+      margin-top: -.5rem;
+    }
   }
 }
 
 .card-container {
   display: grid;
-  grid: auto / repeat(auto-fit, minmax(60px, 12vw));
+  grid: auto / repeat(3, minmax(60px, 12vw));
   justify-content: center;
   column-gap: 1.5rem;
 }
@@ -457,9 +465,30 @@ footer {
 }
 
 @media (orientation: landscape) {
+  body {
+    background-position: 50% 100%;
+  }
+
   main {
     margin: unset;
-    padding-inline: 2rem
+    padding-inline: 2rem;
+    display: unset;
+    align-self: unset;
+    flex-flow: unset;
+    align-items: unset;
+  }
+
+  .card-container {
+    grid: auto / repeat(auto-fit, minmax(60px, 12vw));
+  }
+
+  .score-counter p{
+    flex-flow: row;
+    gap: 1rem;
+
+    & span {
+      margin-top: 0;
+    }
   }
 }
 

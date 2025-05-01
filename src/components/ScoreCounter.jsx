@@ -1,9 +1,11 @@
-export default function ScoreCounter({score, deck}){
+export default function ScoreCounter({score, deck, lang}){
   return (
     <div className='score-counter'>
-      <p>Score: <span>{score.current}/{deck.length}</span></p>
+      <p>{lang === 'en' ? 'Score' : 'Pontuação'}: <span>{score.current}/{deck.length}</span></p>
       <hr />
-      <p>Record: <span>{score.record === 0 ? 'none' : `${score.record}/${deck.length}`}</span></p>
+      <p>{lang === 'en' ? 'Record' : 'Recorde'}: <span>{`${score.record}/${deck.length}`}</span></p>
+      <hr />
+      <p>{lang === 'en' ? 'Wins' : 'Vitórias'}: <span>{score.wins}</span></p>
     </div>
   )
 }
